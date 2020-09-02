@@ -6,8 +6,6 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
         Converter c = new Converter();
-    
-        System.out.println("Test Testesen");
         
         System.out.println("Do you wanna convert from binary or decimal number?");
         String str = sc.nextLine();
@@ -25,7 +23,6 @@ public class Main
             if(decimal<0)
             {
                 System.out.println("Error, not a positive number");
-                System.out.println("Test af GitHub");
             }
             else
             {
