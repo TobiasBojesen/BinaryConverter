@@ -7,7 +7,7 @@ public class Main
         Scanner sc = new Scanner(System.in);
         Converter c = new Converter();
         
-        System.out.println("Do you wanna convert from: \n1. Binary number \n2. decimal number?");
+        System.out.println("Do you wanna convert from: \n1. Binary number? \n2. Decimal number?");
         String str = sc.nextLine();
         
         if(str.equalsIgnoreCase("binary") || str.equals("1"))
