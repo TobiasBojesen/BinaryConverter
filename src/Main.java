@@ -7,18 +7,18 @@ public class Main
         Scanner sc = new Scanner(System.in);
         Converter c = new Converter();
         
-        System.out.println("Do you wanna convert from binary or decimal number?");
+        System.out.println("Do you wanna convert from: \n1. Binary number \n2. decimal number?");
         String str = sc.nextLine();
         
-        if(str.equalsIgnoreCase("binary"))
+        if(str.equalsIgnoreCase("binary") || str.equals("1"))
         {
-            System.out.println("What binary number to convert?");
+            System.out.println("Type a binary number");
             int binary = sc.nextInt();
             System.out.println(c.binaryToDecimal(binary));
         }
-        else if(str.equalsIgnoreCase("decimal"))
+        else if(str.equalsIgnoreCase("decimal") || str.equals("2"))
         {
-            System.out.println("What positive decimal number to convert");
+            System.out.println("type a positive decimal number");
             int decimal = sc.nextInt();
             if(decimal<0)
             {
