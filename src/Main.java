@@ -8,11 +8,11 @@ public class Main
         Scanner sc = new Scanner(System.in);
         Converter c = new Converter();
         
-        //Asks which type of number we wanna convert
+        //Asks which type of number the user wanna convert
         System.out.println("Do you wanna convert from: \n1. Binary number? \n2. Decimal number?");
         String str = sc.nextLine();
         
-        //Check which number type the user has been entered in the terminal
+        //Check which type of number the user has been entered in the terminal
         if(str.equalsIgnoreCase("binary") || str.equals("1"))
         {
             System.out.println("Type a binary number");
