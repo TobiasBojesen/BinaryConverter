@@ -6,6 +6,8 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
         Converter c = new Converter();
+    
+        System.out.println("Test Testesen");
         
         System.out.println("Do you wanna convert from binary or decimal number?");
         String str = sc.nextLine();
