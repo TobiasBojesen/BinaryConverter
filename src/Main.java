@@ -35,6 +35,7 @@ public class Main
         else
         {
             System.out.println("You have to choose between 'decimal or binary' ");
+            System.out.println("TEST");
         }
     }
 }
