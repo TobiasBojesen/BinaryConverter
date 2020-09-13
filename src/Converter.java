@@ -34,11 +34,30 @@ public class Converter
         //Her retunere vi vores decimal som en integer
         return decimal;
     }
+/*
+    public void decimalToBinary(int decimal)
+    {
+        int binary[] = new int[40];
+        int index = 0;
+        while(decimal > 0)
+        {
+            binary[index++] = decimal%2;
+            decimal = decimal/2;
+        }
+        for(int i = index-1;i >= 0;i--)
+        {
+            System.out.print(binary[i]);
+        }
+        System.out.println();
+    }
 
-    public int decimalToBinary(int decimal)
+ */
+
+
+    public long decimalToBinary(int decimal)
     {
         //decimal variabel til at gemme den konverteret decimal
-        int binary = 0;
+        long binary = 0;
         //varibel til fortælle hvilke potens vi er ved
         int num = 0;
 
@@ -53,7 +72,7 @@ public class Converter
             else
             {
                 //regner "resten" ud(hvis der er en rest, ellers 0) i vores binary input og gemmer i midlertidig variabel.
-                int temp = decimal % 2;
+                long temp = decimal % 2;
                 //Sætter binary til at være lig det den rest vi har fundet og ganger med 10
                 //og sætter den i potens af num
                 binary += temp * Math.pow(10, num);
@@ -67,17 +86,14 @@ public class Converter
     }
 
 
-    // Find the first digit
-    public int firstDigit(int n)
+
+    /*
+    public int negativeBinaryConverter(int binary)
     {
-        // Remove last digit from number
-        // til only one digit is left
-
-        while(n >= 10)
-            n /= 10;
-
-        // return the first digit
-        return n;
+        int decimal = 0;
+        return decimal;
     }
+
+     */
 }
 
