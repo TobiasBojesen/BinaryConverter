@@ -6,6 +6,7 @@ import static java.lang.StrictMath.pow;
 
 public class Main
 {
+    private static boolean run = true;
     public static void main(String[] args)
     {
         //Creates Scanner object and Converter class object
@@ -19,21 +20,34 @@ public class Main
         //Check which type of number the user has entered in the terminal
         if(str.equalsIgnoreCase("binary") || str.equals("1"))
         {
-            System.out.println("Type a binary number");
-            int binary = sc.nextInt();
+            while(run){
+                System.out.println("Type a binary number");
+                String binary = sc.nextLine();
+                try {
+                    String firstChar = binary.substring(0,1);
+                    if(firstChar.equals("1"))
+                    {
+                        //System.out.println("Test1");
 
-            if(String.valueOf(binary).charAt(0) == '1')
-            {
-                System.out.println("Test1");
+
+                        run = false;
+                    }
+                    else if(firstChar.equals("0"))
+                    {
+                        //System.out.println("Test2");
+                        // printer resultat af metodekaldet.
+                        System.out.println(c.binaryToDecimal(Integer.parseInt(binary)));
+
+
+                        run = false;
+                    }
+                    else {
+                        System.out.println("prøv igen");
+                    }
+                } catch (Exception ex){
+                    System.out.println(ex.getMessage());
+                }
             }
-            else if(String.valueOf(binary).charAt(0) == '0')
-            {
-                System.out.println("Test2");
-            }
-
-            // printer resultat af metodekaldet.
-            System.out.println(c.binaryToDecimal(binary));
-
         }
         else if(str.equalsIgnoreCase("decimal") || str.equals("2"))
         {
